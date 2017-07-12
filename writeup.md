@@ -172,7 +172,7 @@ with tf.Session() as sess:
 ```
 The certainty for most images is extremely high (>99%). The 30 km sign is sligtly lower, but still >90%. FOr the 30 km sign, the other candidates are the other max speed limits, wich is logical, as these resemble the image the most. Something similar can also be observed in the fifth image, where the other candidates also for humans resemble the "turn right" sign the most. It is also clear from the results that color is not taken into account, otherwise a red stopsign would not show up in the list of top 5 probabilities for the "turn right ahead" sign.
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
+### (Optional) Visualizing the Neural Network
 I did not do this optional task.
 
 
