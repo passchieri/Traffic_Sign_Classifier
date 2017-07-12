@@ -17,6 +17,12 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [datastats]: ./images/datastatistics.png "Dataset statistics"
+[datasample]: ./images/datasample.png "Samples of traffic sign images"
+[augment]: ./images/augment.png "Image Augmenting"
+[augmentsample]: ./images/augmentsample.png "Sample of augmented images"
+[augmentpreprocessed]: ./images/augmentpreprocessed.png "Sample of preprocessed augmented images"
+[internet]: ./images/internet.png "Original and preprocessed images from internet"
+[quality]: ./images/quality.png "Overview of quality of the results of the sign recognition"
 [image1]: ./images/1.jpg "Internet image 1"
 [image2]: ./images/2.jpg "Internet image 2"
 [image3]: ./images/3.jpg "Internet image 3"
@@ -33,9 +39,6 @@ The goals / steps of this project are the following:
 6. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 7. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 8. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications? *Optional*
-
-
-
 
 ---
 ### Writeup
@@ -60,7 +63,10 @@ The image below gives an overview of all the signs in the dataset.
 
 ![Statistics of the data set][datastats]
 
-It can be observed that some signs occur much more frequent than others. In the [HTML](https://github.com/passchieri/Traffic_Sign_Classifier/blob/master/report.html) page of the jupyter notebook, I have also shown 10 random images per sign class. These images show that the quality of the images fluctuates a lot. Especially, many images are rather dark. This means it is crucial to do a proper preprocessing to normalize the image content.
+It can be observed that some signs occur much more frequent than others. For every sign type, I have plotted 10 random images to investigate the image quality. Below, these are shown for 4 signs. 
+
+![Overview of random images per sign type. All others can be found in the html page][datasample]
+In the [HTML](https://github.com/passchieri/Traffic_Sign_Classifier/blob/master/report.html) page of the jupyter notebook, I have also shown 10 random images per sign class. These images show that the quality of the images fluctuates a lot. Especially, many images are rather dark. This means it is crucial to do a proper preprocessing to normalize the image content.
 
 ### Design and Test the Model Architecture
 
