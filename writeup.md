@@ -1,6 +1,6 @@
 # **Build a Traffic Sign Recognition Neural Network** 
 
-This document describes the results of the Traffic Sign Recognition Project of the Udacity CarND.
+This document describes the results of the Traffic Sign Recognition Project of the Udacity CarND. Additional results can be found in [report.html] and [notebook]. 
 
 *Author*: Igor Passchier
 
@@ -122,9 +122,9 @@ I use the Lenet model with only little adaptations. I have added 2 dropout funct
 To train the model, I started with the Lenet model from the previous excercise. I played around with the number of epochs, rate, and batch size. In the end, with a rate of 0.001 and batch size of 128, the validation results stop improving after 40-50 epochs. Therefore, I choose these values, and an 60 epochs. I added the Dropout to the model to prevent overfitting, and improvide the validation accuracy. I also tried with RGB images (only changing the input depth), but that did not give better results. Maybe with additional training images, better normalization and/or modified convolutions it would be possible to get better results with RGB images, as those contain more information then the RGB images (going to Grayscale really throws away information from the image)
 
 My final model results were:
-* Training Accuracy = 0.979
-* Validation Accuracy = 0.945
-* test Accuracy of 0.930
+* Training Accuracy = 0.978
+* Validation Accuracy = 0.951
+* test Accuracy of 0.937
 
 ### Test the Model on New Images
 Below are the images used from the internet to test the performance of the final model. 
