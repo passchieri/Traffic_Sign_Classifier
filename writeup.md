@@ -81,7 +81,7 @@ I tested several preprocessing steps
 
 4. Balancing. Many signs are over/under represented in the data set. This will result in a better classification of images that are over represented. I tried to fix this my keeping the same number of images per sign type. However, then far too little images are left to do a proper training (traning accuracy >> validation accuracy). Therefore, I did not use the balancing in the end.
 
-5. Image augmentation. The increase the number of images for training, I used to augmentation techniques: rotating the images by +-30 degrees, and by warping with a projective transform. I used the skimage.transform library for the actual transformations. In this way, I generated 5 times more images than the original training set. Of course, I did not use the augmentation for the validation and test data sets. The image below shows the 2 transformations for a sample image
+5. Image augmentation. The increase the number of images for training, I used to augmentation techniques: rotating the images by +-30 degrees, and by warping with a projective transform. I used the skimage.transform library for the actual transformations. In this way, I generated 5 times more images than the original training set. Of course, I did not use the augmentation for the validation and test data sets. The image below shows the 2 transformations for a sample image. These augmentations have been inspired by a solution found on the internet.
 ![Example of the two augmentation techiques used][augment]
 
 Below, 16 samples of the augemented images are provided.
