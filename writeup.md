@@ -60,7 +60,7 @@ The image below gives an overview of all the signs in the dataset.
 
 ![Statistics of the data set][datastats]
 
-It can be observed that some signs occur much more frequent than others. In the HTML page of the jupyter notebook, I have also shown 10 random images per sign class. These images show that the quality of the images fluctuates a lot. Especially, many images are rather dark. This means it is crucial to do a proper preprocessing to normalize the image content.
+It can be observed that some signs occur much more frequent than others. In the [HTML](https://github.com/passchieri/Traffic_Sign_Classifier/blob/master/report.html) page of the jupyter notebook, I have also shown 10 random images per sign class. These images show that the quality of the images fluctuates a lot. Especially, many images are rather dark. This means it is crucial to do a proper preprocessing to normalize the image content.
 
 ### Design and Test the Model Architecture
 
