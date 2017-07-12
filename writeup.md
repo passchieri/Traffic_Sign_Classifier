@@ -69,24 +69,29 @@ It can be observed that some signs occur much more frequent than others. For eve
 In the [HTML](https://github.com/passchieri/Traffic_Sign_Classifier/blob/master/report.html) page of the jupyter notebook, I have also shown 10 random images per sign class. These images show that the quality of the images fluctuates a lot. Especially, many images are rather dark. This means it is crucial to do a proper preprocessing to normalize the image content.
 
 ### Design and Test the Model Architecture
+I focussed my optimization on the preprocessing steps, starting with the Lenet model used previously. This gave a stable basis to investigate the effects of the preprocessing. 
 
-As a first step, I decided to convert the images to grayscale because ...
+#### Preprocessing
+I tested several preprocessing steps
+1. Grayscale. I experimented with using either color images or grayscale images. In the end, I used grayscale images, as that gave the best results. This came a bit as a surprise, as the color information already provides a lot of information on the traffic sign. Probably with a better normalization algoritm for the color images, it would have been possible to get better results with color images. However, I did not manage to find a good (combined) solution for color image usage and normalization. Filtering out some colors was difficult due to the large variation in intensitiy, and the sharp lines that result from color filtering
 
-Here is an example of a traffic sign image before and after grayscaling.
+2. Recropping. I tried recropping the images based on the provided bounding boxes. This improved the training, but was difficult to use in combination with the augmentation. Therefore, I did not use the recropping in the end. The code is still available in the HTML page.
 
-![alt text][image2]
+3. Normalizing. The first normalization I tried was just scaling by subtracting 128 and dividing by 128. I obtained better results when using the min and max intensity in the grayscale images to really go to -1 - + 1 scale. The formula used is: pix=(pix-max/2-min/2)/(max/2-min/2)
 
-As a last step, I normalized the image data because ...
+4. Balancing. Many signs are over/under represented in the data set. This will result in a better classification of images that are over represented. I tried to fix this my keeping the same number of images per sign type. However, then far too little images are left to do a proper training (traning accuracy >> validation accuracy). Therefore, I did not use the balancing in the end.
 
-I decided to generate additional data because ... 
+5. Image augmentation. The increase the number of images for training, I used to augmentation techniques: rotating the images by +-30 degrees, and by warping with a projective transform. I used the skimage.transform library for the actual transformations. In this way, I generated 5 times more images than the original training set. Of course, I did not use the augmentation for the validation and test data sets. The image below shows the 2 transformations for a sample image
+![Example of the two augmentation techiques used][augment]
 
-To add more data to the the data set, I used the following techniques because ... 
+Below, 16 samples of the augemented images are provided.
+![16 samples of augmented images][augmentsample]
 
-Here is an example of an original image and an augmented image:
 
-![alt text][image3]
+The whole preprocessing resulted in **173995** training samples. 16 samples are shown below.
+![16 samples of fully preprocessed images][augmentpreprocessed]
 
-The difference between the original data set and the augmented data set is the following ... 
+
 
 ### Model architecture
 
