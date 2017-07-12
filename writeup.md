@@ -1,6 +1,6 @@
 # **Build a Traffic Sign Recognition Neural Network** 
 
-This document describes the results of the Traffic Sign Recognition Project of the Udacity CarND. Additional results can be found in [report.html] and [notebook]. 
+This document describes the results of the Traffic Sign Recognition Project of the Udacity CarND. Additional results can be found in [jupyter notebook](https://github.com/passchieri/Traffic_Sign_Classifier/blob/master/Traffic_Sign_Classifier.ipynb) and [html report](https://github.com/passchieri/Traffic_Sign_Classifier/blob/master/report.html). 
 
 *Author*: Igor Passchier
 
