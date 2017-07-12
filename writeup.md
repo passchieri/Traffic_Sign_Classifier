@@ -124,7 +124,7 @@ To train the model, I started with the Lenet model from the previous excercise. 
 My final model results were:
 * Training Accuracy = 0.979
 * Validation Accuracy = 0.945
-* test Accuracy of 0.940
+* test Accuracy of 0.930
 
 ### Test the Model on New Images
 Below are the images used from the internet to test the performance of the final model. 
