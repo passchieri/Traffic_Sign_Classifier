@@ -139,7 +139,7 @@ The model predicted all signs correctly. The probabilities are provided in the i
 
 
 The code to create these images is given below:
-<code>
+```
 def plot_quality(img,y,values,indices):
     plt.figure(figsize=(12,8))
 
@@ -169,9 +169,8 @@ with tf.Session() as sess:
     indices=out.indices
     for i in range(len(values)):
         plot_quality(X_internet_img[i],y_internet[i],values[i],indices[i])
-</code>
-
-The certainty for most images is extremely high (>99%). The 30 km sign is sligtly lower, but still >90%. FOr the 30 km sign, the other candidates are the other max speed limits, wich is logical, as these resemble the image the most. Something similar can also be observed in the fifth image, where the other candidates also for humans resemble the "turn right" sign the most.
+```
+The certainty for most images is extremely high (>99%). The 30 km sign is sligtly lower, but still >90%. FOr the 30 km sign, the other candidates are the other max speed limits, wich is logical, as these resemble the image the most. Something similar can also be observed in the fifth image, where the other candidates also for humans resemble the "turn right" sign the most. It is also clear from the results that color is not taken into account, otherwise a red stopsign would not show up in the list of top 5 probabilities for the "turn right ahead" sign.
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 I did not do this optional task.
