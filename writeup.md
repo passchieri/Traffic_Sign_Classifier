@@ -16,6 +16,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
+[datastats]: ./images/datastatistics.png "Dataset statistics"
 [image1]: ./images/1.jpg "Internet image 1"
 [image2]: ./images/2.jpg "Internet image 2"
 [image3]: ./images/3.jpg "Internet image 3"
@@ -43,19 +44,23 @@ This is the writeup of my project. The project code can be found on  [github](ht
 
 ### Data Set Summary & Exploration
 
-I used the pandas library to calculate summary statistics of the traffic
+I used the plain python and numpy to calculate a summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* Number of training examples = 34799
+* Number of validation examples = 4410
+* Number of testing examples = 12630
+* Image data shape = (32, 32, 3)
+* Number of classes = 43
+
+So we have a training set of almost 35000 RGB 32x32 images.
 
 ### Visualization of the dataset
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+The image below gives an overview of all the signs in the dataset.
 
-![alt text][image1]
+![Statistics of the data set][datastats]
+
+It can be observed that some signs occur much more frequent than others. In the HTML page of the jupyter notebook, I have also shown 10 random images per sign class. These images show that the quality of the images fluctuates a lot. Especially, many images are rather dark. This means it is crucial to do a proper preprocessing to normalize the image content.
 
 ### Design and Test the Model Architecture
 
